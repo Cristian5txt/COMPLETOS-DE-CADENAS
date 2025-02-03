@@ -30,6 +30,27 @@ int main()
     cout <<DOCS<<endl;
     cout<< "LA LONGITUD DE SU FRASE ES: "<<longitud1<<endl;
     //CONVERTIR
-    transform(DOCS.begin(), DOCS.end(), DOCS.begin(), ::tolower);
+    /*transform(DOCS.begin(), DOCS.end(), DOCS.begin(), ::tolower);
     cout <<DOCS<<endl;
-    r
+    reverse(DOCS.begin(), DOCS.end());
+    cout <<"LA FRASE AL REVES. "<<DOCS<<endl;*/
+    //EXTRAER
+
+    string subcadena = DOCS.substr(7,8);
+    cout <<subcadena<<endl;
+
+
+    //BUSQUEDA
+    string busqueda;
+        cout << "INGRESE EL NOMBRE A BUSCAR"<<endl;
+    cin>>busqueda;
+
+    if (DOCS.find(busqueda)!=string::npos){
+      cout << "SE ENCONTRO A: "<<busqueda<<endl;
+    }
+    else{
+      cout << "NO SE ENCONTRO A: " <<busqueda<<endl;
+    }
+
+    return 0;
+}
